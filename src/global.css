@@ -1,0 +1,62 @@
+html,body {
+	margin: 0;
+	font-size: 62.5%;
+/*	cursor: url("/images/cursor.svg") 30 30, pointer;*/
+	background: var(--base);
+	width: 100vw;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	::-webkit-scrollbar-track {
+		background: var(--base);
+	}
+	::-webkit-scrollbar-thumb {
+		background: var(--accent);
+	}
+}
+
+@media(max-width: 800px) {
+	html,body {
+		font-size: 58%
+	}
+}
+html::-webkit-scrollbar {
+	background: var(--accent);
+	display: none;
+}
+
+* {
+	box-sizing: border-box;
+/*	background: var(--base);*/
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--base);
+}
+
+:root {
+	/* text	*/
+	--text-xlarge: 5.4rem;
+	--text-large: 4.8rem;
+	--text-reg: 1.6rem;
+
+
+
+	/*colors*/
+	--white: #fff;
+	--black: #000;
+	--light-blue: #89BCC1;
+	--dynamic-orange: #f3451e;
+	--tea-rose: #dca7ab;
+	--killbill-yellow: #efc11a;
+	--gray: #CECECE;
+
+
+	--lavender-blush: #eee5e9;
+	--light-green: #71f79f;
+	--charcoal: #2a3d45;
+
+	--base: #eee5e9;
+	--accent: #71f79f;
+	--primary: #2a3d45;
+
+}
