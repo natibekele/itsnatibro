@@ -1,7 +1,7 @@
 <script type="text/javascript">
 	import "../global.css"
 	import "../fonts.css" //set up fonts
-	import Header from "$lib/Header.svelte"
+	import Header from "$lib/header.svelte"
 	import MouseShadow from "$lib/MouseShadow.svelte"
 	// import Cover from "$lib/Cover.svelte"
 	import Footer from "$lib/footer.svelte"

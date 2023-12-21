@@ -68,7 +68,7 @@
 	<div class="block1" 
 		on:introstart={() => (console.log('intro started'))}
 	>
-		<img src="/images/sky.jpeg" />
+		<img src="/images/sky.jpeg" alt="sky and clouds" />
 	</div>
 
 	<MakerBlock /> 
