@@ -8,8 +8,9 @@
 
 
 		<li class="header--link"><a href="/">/ cming suːn</a><span class="block"></span></li>
-
 	</ul>
+
+	<div class="border-bottom"></div>
 </header>
 
 
@@ -99,6 +100,9 @@
 
 	@media(max-width: 800px) {
 		.header--link {
+			display: none;
+		}
+		.border-bottom {
 			display: none;
 		}
 	}
