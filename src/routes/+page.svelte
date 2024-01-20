@@ -68,7 +68,7 @@
 	<div class="block1" 
 		on:introstart={() => (console.log('intro started'))}
 	>
-		<img src="/images/sky.jpeg" alt="sky and clouds" />
+		<img src="/images/me.jpg" alt="portrait in japan" />
 	</div>
 
 	<MakerBlock /> 
@@ -77,29 +77,15 @@
 
 	<TechBlock />
 
-	<div class="grid-image g1">
-		<img src="http://tinyurl.com/ms465e32" alt="laptop"/>
-	</div>
 
-	<div class="grid-image g2" data-rellax-speed="1">
-		<img src="http://tinyurl.com/477ev6n6" alt="record player"/>
-	</div>
-
-	<div class="grid-image g3">
-		<img src="http://tinyurl.com/4y6y96x4" alt="editorial"/>
-	</div>
-	<div class="grid-image g4">
-		<img src="http://tinyurl.com/mv6vt26f" alt="flowers"/>
-	</div>
-	<div class="grid-image g5">
-		<img src="http://tinyurl.com/ye2jx9uy" alt="arduino"/>
-	</div>
-	<div class="grid-image g6" >
-		<img src="http://tinyurl.com/av7m3ra9" alt="plants"/>
-	</div>
 	<div class="video-block">
 		<video type="video/mp4" src="/videos/comp.mp4" muted=true autoplay=true loop/>
 		<div class="overlay"></div>
+	</div>
+
+	<div class="mockups">
+		<img src="images/justfootball.jpg" class="full-image" alt="project images on laptop mockups"/>
+		<img src="images/sundance.jpg" class="full-image" alt="project images on laptop mockups"/>
 	</div>
 
 </div>
@@ -137,6 +123,9 @@
 		max-height: 86.6rem;
 		margin-bottom: 10rem;
 	}
+	.block1 img {
+/*		min-height: 64rem;*/
+	}
 	.block1 > img {
 		height: 100%;
 		width: 100%;
@@ -154,7 +143,7 @@
 	.video-block {
 		margin-bottom: 13.5rem;
 		grid-column: 2/10;
-		grid-row: 9;
+		grid-row: 3;
 		max-height: 75rem;
 		overflow: hidden;
 		border-radius: 20rem;
@@ -166,6 +155,20 @@
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
+	}
+
+	.mockups {
+		grid-row: 3;
+		grid-column: 1/11;
+		display: flex;
+		flex-direction: row;
+		margin-left: -2%;
+		display: none;
+	}
+	.mockups > .full-image {
+		width: 55%;
+		height: auto;
+		margin-bottom: 13.5rem;
 	}
 
 	.overlay {

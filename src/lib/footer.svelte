@@ -6,7 +6,7 @@
 <footer>
 	<div class="row">
 		<ul class="footer-list">
-			<!-- <li class="footer-list__li"><a> /email </a> </li> -->
+		<!-- <li class="footer-list__li"><a> /email </a> </li> -->
 			<li class="footer-list__li"><a target="blank" href="http://tinyurl.com/yhcfv6nf"> /contact-form </a> </li>
 			<li class="footer-list__li"><a target="blank" href="https://aberash.xyz"> /aberash </a> </li>
 		</ul>

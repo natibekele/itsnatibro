@@ -11,13 +11,13 @@
 </script>
 
 <Header />
-{#key data.pathname}
-<div 
+<!-- {#key data.pathname} -->
+<!-- <div 
 	in:fly={{duration: 300, delay: 500}}
-	out:fly={{duration: 300, delay: 500}}>
+	out:fly={{duration: 300, delay: 500}}> -->
 	<slot/>
-</div>
-{/key}
+<!-- </div> -->
+<!-- {/key} -->
 <Footer />
 
 <!-- <SlideTransition /> -->

@@ -3,11 +3,11 @@
 		<li class="header--big-text"> NATHAN SHANKO </li>
 
 		<li class="header--link"><a href="/">/ home</a><span class="block"></span></li>
-		<li class="header--link"><a href="/">/ cming suːn</a><span class="block"></span></li>
-		<li class="header--link"><a href="/">/ cming suːn</a><span class="block"></span></li>
+		<li class="header--link"><a href="/projects">/ prjcts</a><span class="block"></span></li>
+		<li class="header--link"><a href="/experiments">/ exprmnts</a><span class="block"></span></li>
 
 
-		<li class="header--link"><a href="/">/ cming suːn</a><span class="block"></span></li>
+		<!-- <li class="header--link"><a href="/">/ cming suːn</a><span class="block"></span></li> -->
 	</ul>
 
 	<div class="border-bottom"></div>
@@ -50,10 +50,11 @@
 		padding: 0.5rem 1rem;
 		position: relative;
 		z-index: 1;
-		mix-blend-mode: color-burn;
+/*		mix-blend-mode: color-burn;*/
 	}
 	.header--link:hover > a {
-		color: var(--white);
+/*		color: var(--white);*/
+/*		font-weight: bold;*/
 	}
 	.header--link > a {
 		z-index: 1;
@@ -65,7 +66,7 @@
 
 	.block {
 		position: absolute;
-		background: var(--primary);
+		background: var(--accent);
 		height: 100%;
 		width: 100%;
 		left: -100%;
