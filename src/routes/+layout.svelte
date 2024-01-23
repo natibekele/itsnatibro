@@ -11,13 +11,22 @@
 </script>
 
 <Header />
+<MouseShadow />
 <!-- {#key data.pathname} -->
 <!-- <div 
 	in:fly={{duration: 300, delay: 500}}
 	out:fly={{duration: 300, delay: 500}}> -->
+<div class="slot-container">
 	<slot/>
-<!-- </div> -->
+</div>
 <!-- {/key} -->
 <Footer />
 
 <!-- <SlideTransition /> -->
+
+<style type="text/css">
+	.slot-container {
+		padding-top: 5.5rem;
+		z-index: 1;
+	}
+</style>

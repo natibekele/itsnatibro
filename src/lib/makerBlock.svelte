@@ -37,11 +37,11 @@
 	}
 
 	.title {
-		font-size: 2.4rem;
+		font-size: 8rem;
 		letter-spacing: -1.44px;
 		line-height: 110%;
-		font-weight: 500;
-		margin: 5.5rem 0;
+		font-weight: 600;
+		margin: 3.5rem 0;
 	}
 
 	.para {

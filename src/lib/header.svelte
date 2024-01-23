@@ -16,13 +16,14 @@
 
 <style>
 	.header {
-		width: 100%;
+		width: calc(100% - 4rem);
 		font-family: 'Manrope';
 		background: var(--base);
-		padding: 2.4rem 0;
-		position: relative;
-		margin: 0 2rem;
+		padding: 0.4rem 0;
+		position: fixed;
+		transform: translateX(2rem);
 		display: grid;
+		z-index: 10;
 	}
 	.header--ul {
 		padding: 0.5rem 1rem;
@@ -31,7 +32,7 @@
 		align-items: center;
 	}
 	.header--big-text {
-		font-size: 3.2rem;
+		font-size: 2.2rem;
 		font-weight: 700;
 		letter-spacing: -1.92px;
 		line-height: 110%;
@@ -84,7 +85,7 @@
 	.border-bottom {
 		position: absolute;
 		bottom: 1px;
-		height: 1px;
+		height: 2px;
 		width: 100%;
 		background: var(--primary);
 	}
@@ -95,7 +96,7 @@
 		}
 
 		.header--link {
-			margin-right: 3rem;
+			margin-right: 2rem;
 		}
 	}
 

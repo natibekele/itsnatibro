@@ -1,10 +1,10 @@
 <script type="text/javascript">
-	import { fade, scale } from "svelte/transition";
+	import { fade, scale, fly } from "svelte/transition";
 </script>
 <div class="exp">
-	<h3 in:fade> work in progress</h3>
+	<h3 in:fade={{ y: 0, duration: 750, delay: 300 }}> work in progress</h3>
 
-	<p in:fade> i'm building something new for this space. sadly it's not finished yet. come & check back soon! </p>
+	<p in:fade={{ y:0, duration: 750, delay: 500 }} > i'm building something new for this space. sadly it's not finished yet. come & check back soon! </p>
 </div>
 
 <style>

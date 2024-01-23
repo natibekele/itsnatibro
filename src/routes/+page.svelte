@@ -32,10 +32,10 @@
 			duration: 400
 		})
 
-		if (document.querySelector('.mgrid').clientWidth < 800) return;
-		var rellax = new Rellax('.g1');
-		var rx = new Rellax('.g3');
-		var rx2 = new Rellax('.g4')
+		// if (document.querySelector('.mgrid').clientWidth < 800) return;
+		// var rellax = new Rellax('.g1');
+		// var rx = new Rellax('.g3');
+		// var rx2 = new Rellax('.g4')
 
 	}
 
@@ -141,7 +141,7 @@
 	}
 
 	.video-block {
-		margin-bottom: 13.5rem;
+		margin: 0 auto 13.5rem auto;
 		grid-column: 2/10;
 		grid-row: 3;
 		max-height: 75rem;

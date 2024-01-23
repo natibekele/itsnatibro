@@ -7,8 +7,8 @@
 	})
 
 	function updateShadowPosition(e) {
-		let x = e.clientX - 14
-		let y = e.clientY - 14
+		let x = e.clientX - 16
+		let y = e.clientY - 16
 
 		anime({
 			targets: myShadow,
@@ -16,7 +16,7 @@
 			translateY: `${y}`,
 			easing: 'easeOutSine',
 			duration: 100,
-			opacity: 0.9
+			opacity: 0.6
 		});
 	}
 </script>
@@ -28,12 +28,13 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		height: 28px;
-		width: 28px;
+		height: 32px;
+		width: 32px;
 		border-radius: 50%;
 		background: var(--accent);
-		z-index: -1;
-		opacity: 0;
+		z-index: 10;
+		pointer-events: none;
+/*		opacity: 1;*/
 /*		mix-blend-mode: color-dodge;*/
 /*		transition: ease-out 0.2s;*/
 	}
