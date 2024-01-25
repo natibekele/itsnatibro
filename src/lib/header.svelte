@@ -42,7 +42,7 @@
 	}
 	.header--link {
 		font-size: 1.5rem;
-		font-weight: 500;
+		font-weight: 400;
 		margin-right: 9rem;
 		letter-spacing: -0.5px;
 		overflow: hidden;

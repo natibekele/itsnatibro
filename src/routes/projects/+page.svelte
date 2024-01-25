@@ -182,6 +182,7 @@
 		font-size: 1.8rem;
 		font-weight: normal;
 		letter-spacing: 1.2%;
+		line-height: 1.5;
 	}
 
 	.accent {
