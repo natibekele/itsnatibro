@@ -68,7 +68,7 @@
 	<div class="block1" 
 		on:introstart={() => (console.log('intro started'))}
 	>
-		<img src="/images/me.jpg" alt="portrait in japan" />
+		<img src="/images/cover.jpg" alt="portrait in japan" />
 	</div>
 
 	<MakerBlock /> 
@@ -103,6 +103,7 @@
 		font-family: 'Manrope';
 		margin: 0 2rem;
 		opacity: 1;
+/*		padding-top: 3rem;*/
 	}
 
 	.slash {

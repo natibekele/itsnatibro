@@ -3,10 +3,12 @@
 	import AnimatedText from "$lib/AnimatedText.svelte"
 	import RotatingSphere from "$lib/RotatingSphere.svelte"
 	import WordSplit from "$lib/WordSplit.svelte"
+	import LineSplit from "$lib/LineSplit.svelte"
 	import { quintOut } from 'svelte/easing';
+	import { v4 as uuid } from "uuid";
 </script>
 
-<div class="container" in:fade={{ duration: 500 }} out:fade={{duration: 500}}>
+<div class="container"  out:fade={{duration: 500}}>
 	<!-- <AnimatedText text={"Lorem ipsum"} /> -->
 	<!-- <RotatingSphere /> -->
 		<div class="block">
@@ -25,20 +27,15 @@
 	<div class="block">
 		<div class="child">
 			<div class="text-container">
-				<p class="proj-description">
-					At NostalgiaBox, we believe in the profound power of memories. Our ethos is rooted in the idea that life's most meaningful moments are too precious to be lost in the whirlwind of time. Our purpose is to provide a sanctuary where these moments can be preserved, cherished, and rediscovered.
-					<br />
-					<br />
+				<div class="proj-description">
+					<LineSplit text={`At NostalgiaBox, we believe in the profound power of memories. Our ethos is rooted in the idea that life's most meaningful moments are too precious to be lost in the whirlwind of time. Our purpose is to provide a sanctuary where these moments can be preserved, cherished, and rediscovered.`} id={uuid()}/>
 
-					NostalgiaBox is a React Native application that targets iOS/Android platforms and implements a unique approach in capturing and storing memories.
-					<br />
-					<br />
-					Creating captivating narratives in a timeless way that reminds us that we should make memories while we can, and the first person we should be looking to plese is ourselves, not the world!
-					<br />
-					<br />
+					<LineSplit text={`NostalgiaBox is a React Native application that targets iOS/Android platforms and implements a unique approach in capturing and storing memories.`} id={uuid()} />
+
+					<LineSplit text={`Creating captivating narratives in a timeless way that reminds us that we should make memories while we can, and the first person we should be looking to plese is ourselves, not the world!`} id={uuid()}/>
 
 					<a target="blank" href="https://nostalgiabox.app" class="site-link">Live Link.</a>
-				</p>
+				</div>
 			</div>
 		</div>
 		<div class="child">
@@ -61,25 +58,19 @@
 	<div class="block">
 		<div class="child">
 			<div class="text-container">
-				<p class="proj-description">
-					Football--Village is a dynamic project designed to cultivate continuous learning and elevate football analysis and coaching skills. As a dedicated platform, it serves as a centralized hub for a diverse range of football-related work.
-					<br />
+				<div class="proj-description">
+					<LineSplit text={`Football--Village is a dynamic project designed to cultivate continuous learning and elevate football analysis and coaching skills. As a dedicated platform, it serves as a centralized hub for a diverse range of football-related work.`} id={uuid()}/>
 
-					Weekly, the site unveils articles that delve into various coaching topics, encompassing game analysis, contemporary football trends, session planning, exercises, management insights, and compelling data analysis or visualizations.
-					<br />
+					<LineSplit text={`Weekly, the site unveils articles that delve into various coaching topics, encompassing game analysis, contemporary football trends, session planning, exercises, management insights, and compelling data analysis or visualizations. `} id={uuid()}/>
 
-					At its core, Football--Village aims to be a learning sanctuary for aspiring coaches, football enthusiasts, and players eager to deepen their understanding and enjoyment of the sport. The commitment to delivering substantial content is a personal journey to grow and gain a profound appreciation for the intricacies of the game.
-					<br />
+					<LineSplit text={`At its core, Football--Village aims to be a learning sanctuary for aspiring coaches, football enthusiasts, and players eager to deepen their understanding and enjoyment of the sport. The commitment to delivering substantial content is a personal journey to grow and gain a profound appreciation for the intricacies of the game.`} id={uuid()}/>
 
-					This project seeks to foster a community where growth is a shared experience, nurturing relationships that benefit everyone involved. It stands out by offering youth coaching resources freely, recognizing that coaching extends beyond individuals—it's about the holistic development of players. By supporting coaches in their roles, the project strives to cultivate not only superior players but better individuals.
-					<br />
+					<LineSplit text={`This project seeks to foster a community where growth is a shared experience, nurturing relationships that benefit everyone involved. It stands out by offering youth coaching resources freely, recognizing that coaching extends beyond individuals—it's about the holistic development of players. By supporting coaches in their roles, the project strives to cultivate not only superior players but better individuals.`} id={uuid()}/>
 
-					Step into this space, where football enthusiasts discover valuable resources and contribute to an ever-evolving journey in football development.
+					<LineSplit text={`Step into this space, where football enthusiasts discover valuable resources and contribute to an ever-evolving journey in football development.`} id={uuid()}/>
 
-					<br />
-					<br />
 					<a target="blank" href="https://just-football.vercel.app" class="site-link">Live Link.</a>
-				</p>
+				</div>
 			</div>
 		</div>
 		<div class="child">
@@ -103,15 +94,15 @@
 	<div class="block">
 		<div class="child">
 			<div class="text-container">
-				<p class="proj-description">
-					The New Frontier program was “a fully biodigital showcase”. A globally accessible online project from Jan. 20-28, 2022, with in-person extensions and live performances at The Craft, a new artist-centered venue in Park City. Originally birthed as a response to the coronavirus pandemic, New Frontier created a space were people could still experience the Sundance Film Festival from the comfort, and safety of their own homes. 
-					<br />
-					<br />
-					Live premiers following an event schedule, VR immersion, real time audio and video chats in 3D enviornments, text chat, and attendee lists, all features that were built and offered in the New Frontier for Sundance.
-					<br />
-					<br />
+				<div class="proj-description">
+					<LineSplit text={`The New Frontier program was “a fully biodigital showcase”. A globally accessible online project from Jan. 20-28, 2022, with in-person extensions and live performances at The Craft, a new artist-centered venue in Park City. Originally birthed as a response to the coronavirus pandemic, New Frontier created a space were people could still experience the Sundance Film Festival from the comfort, and safety of their own homes. `} id={uuid()}/>
+					
+					
+					<LineSplit text={`Live premiers following an event schedule, VR immersion, real time audio and video chats in 3D enviornments, text chat, and attendee lists, all features that were built and offered in the New Frontier for Sundance.`} id={uuid()}/>
+					
+					
 					<a target="blank" href="https://www.sundance.org/blogs/2022-sundance-film-festival-new-frontier-spans-biodigital-terrain-blends-online-in-person-in-real-time/" class="site-link">Sundance Blog Post.</a>
-				</p>
+				</div>
 			</div>
 		</div>
 		<div class="child">
@@ -174,7 +165,7 @@
 		max-width: 94rem;
 		border-radius: 15%;
 		object-fit: cover;
-		border: solid 1px var(--primary);
+/*		border: solid 0.5px var(--primary);*/
 		aspect-ratio: 4/5;
 		margin: auto;
 	}
@@ -183,6 +174,10 @@
 		font-weight: normal;
 		letter-spacing: 1.2%;
 		line-height: 1.5;
+		display: flex;
+		justify-content: center;
+		flex: 1;
+		flex-direction: column;
 	}
 
 	.accent {
