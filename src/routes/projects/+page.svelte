@@ -184,6 +184,11 @@
 	}
 
 
+	@media(min-width: 1200px) {
+		.marquee-container__text {
+			font-size: 45rem;
+		}
+	}
 
 	@media(max-width: 800px) {
 		.marquee-container {
