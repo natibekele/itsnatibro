@@ -57,5 +57,11 @@
 		line-height: 140%;
 	}
 
+	@media(min-width: 1200px) {
+		.title {
+			font-size: 10rem;
+		}
+	}
+
 
 </style>

@@ -229,6 +229,11 @@
 			transform: translateX(-300%);
 		}
 	}
+	@media(min-width: 1200px) {
+		.block1 {
+			max-height: none;
+		}
+	}
 	@media(max-width: 800px) {
 		.mgrid {
 			display: flex;

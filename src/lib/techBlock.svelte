@@ -123,6 +123,11 @@
 	margin-bottom: 10rem;
 	}
 
+	@media(min-width: 1200px) {
+		.title {
+			font-size: 10rem;
+		}
+	}
 
 
 </style>
