@@ -10,7 +10,7 @@
 <style>
 	div {
 		font-family: 'Manrope';
-		padding: 1.5rem 1rem;
+		padding: 1.5rem 0rem;
 /*		background: var(--killbill-yellow);*/
 		height: 90vh;
 		width: 100%;

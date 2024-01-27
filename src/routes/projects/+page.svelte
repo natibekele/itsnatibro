@@ -35,7 +35,7 @@
 			<h1 class="marquee-container__text">proyectos/</h1>
 			<h1 class="marquee-container__text">proyectos/</h1>
 		</div>
-<!-- 		<div class="marquee-container__block">
+		<!-- <div class="marquee-container__block">
 			<h1 class="marquee-container__text">projeks /</h1>
 			<h1 class="marquee-container__text">projeks /</h1>
 			<h1 class="marquee-container__text">projeks /</h1>
@@ -104,6 +104,7 @@
 		width: calc(100vw - 4rem);
 		height: 100%;
 		overflow: hidden;
+		height: calc(100vh - 9rem);
 	}
 
 	.marquee-container__block {
@@ -185,6 +186,19 @@
 
 
 	@media(max-width: 800px) {
+		.marquee-container {
+			position: relative;
+			height: auto;
+			overflow: hidden;
+			top: 0rem;
+		}
+		.marquee-container__text {
+			font-size: 16rem;
+		}
+		.project {
+			border-right-width: 1px;
+			border-top-width: 1px;
+		}
 		.container {
 			display: flex;
 			flex-direction: column;
