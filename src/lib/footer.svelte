@@ -27,7 +27,7 @@
 		font-weight: 500;
 		letter-spacing: -0.32px;
 		background: var(--base);
-		z-index: 10;
+		z-index: 9;
 		position: absolute;
 	}
 	.row {
@@ -63,4 +63,5 @@
 	.random-text span {
 		font-weight: 800;
 	}
+
 </style>
