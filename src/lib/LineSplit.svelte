@@ -12,7 +12,7 @@
 	let _container;
 
 	const maskStyle = `overflow: hidden; display: block;position: relative;`;
-	const lineStyle =`top: 0px;display: inline-block;font-size: 1.8rem;font-weight: normal;letter-spacing: 1.5;transform: translateY(100%);`;
+	const lineStyle =`top: 0px;display: inline-block;font-size: 1.8rem;font-weight: normal;letter-spacing: 1.5;transform: translateY(100%); opacity:0;`;
 	const open = `<span class="mask" style="${maskStyle}"><span class="line" style="${lineStyle}">`;
 	const close = `</span></span>`
 
@@ -68,6 +68,7 @@
 		anime({
 			targets: elements,
 			translateY: 0,
+			opacity: 1,
 			delay: 200,
 			duration: 1250,
 			easing: 'easeInOutQuad'

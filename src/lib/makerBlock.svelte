@@ -42,6 +42,7 @@
 		line-height: 110%;
 		font-weight: 600;
 		margin: 3.5rem 0;
+
 	}
 
 	.para {

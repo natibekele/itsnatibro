@@ -101,7 +101,8 @@
 		grid-template-columns: repeat(10, 1fr);
 		grid-auto-rows: minmax(20rem, auto);
 		font-family: 'Manrope';
-		margin: 0 2rem;
+		margin: 2rem;
+/*		margin-top: 3.5rem;*/
 		opacity: 1;
 /*		padding-top: 3rem;*/
 	}
@@ -116,10 +117,10 @@
 	}
 
 	.block1 {
-		margin-top: 3.5rem;
+/*		margin-top: 3.5rem;*/
 		grid-column: 1/6;
 		grid-row: 1;
-		border-radius: 20rem;
+/*		border-radius: 20rem;*/
 		overflow: hidden;
 		max-height: 86.6rem;
 		margin-bottom: 10rem;
@@ -147,7 +148,7 @@
 		grid-row: 3;
 		max-height: 75rem;
 		overflow: hidden;
-		border-radius: 20rem;
+/*		border-radius: 20rem;*/
 		aspect-ratio: 1200 / 750;
 		position: relative;
 

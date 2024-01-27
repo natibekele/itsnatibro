@@ -5,109 +5,74 @@
 	import WordSplit from "$lib/WordSplit.svelte"
 	import LineSplit from "$lib/LineSplit.svelte"
 	import { quintOut } from 'svelte/easing';
-	import { v4 as uuid } from "uuid";
+	import { onMount } from "svelte"
+	import anime from "animejs"
+
+
+	onMount(startAnimation)
+
+	function startAnimation() {
+		anime({
+			targets: '.marquee-container__block',
+			translateX: '-66.66666%',
+			duration: 20000,
+			loop: true,
+			easing: 'linear',
+			// delay: anime.stagger(100)
+		})
+	}
 </script>
 
-<div class="container"  out:fade={{duration: 500}}>
-	<!-- <AnimatedText text={"Lorem ipsum"} /> -->
-	<!-- <RotatingSphere /> -->
-		<div class="block">
-		<div class="child">
-			<img src="images/nostalgiabox2.jpg" alt="just football project laptop mockup"
-				class="project-image"
-				transition:fade={{ duration: 500 }} />
+<div class="container"  in:fade={{duration: 500 }} out:fade={{duration: 500}}>
+	<div class="marquee-container">
+		<div class="marquee-container__block">
+			<h1 class="marquee-container__text">projects/</h1>
+			<h1 class="marquee-container__text">projects/</h1>
+			<h1 class="marquee-container__text">projects/</h1>
 		</div>
-		<div class="child">
-			<div class="text-container">
-				<h3 > NostalgiaBox </h3>
-				<h3 class="accent"> 2023 </h3>
-			</div>
+		<div class="marquee-container__block">
+			<h1 class="marquee-container__text">proyectos/</h1>
+			<h1 class="marquee-container__text">proyectos/</h1>
+			<h1 class="marquee-container__text">proyectos/</h1>
 		</div>
-	</div>
-	<div class="block">
-		<div class="child">
-			<div class="text-container">
-				<div class="proj-description">
-					<LineSplit text={`At NostalgiaBox, we believe in the profound power of memories. Our ethos is rooted in the idea that life's most meaningful moments are too precious to be lost in the whirlwind of time. Our purpose is to provide a sanctuary where these moments can be preserved, cherished, and rediscovered.`} id={uuid()}/>
-
-					<LineSplit text={`NostalgiaBox is a React Native application that targets iOS/Android platforms and implements a unique approach in capturing and storing memories.`} id={uuid()} />
-
-					<LineSplit text={`Creating captivating narratives in a timeless way that reminds us that we should make memories while we can, and the first person we should be looking to plese is ourselves, not the world!`} id={uuid()}/>
-
-					<a target="blank" href="https://nostalgiabox.app" class="site-link">Live Link.</a>
-				</div>
-			</div>
-		</div>
-		<div class="child">
-			<img src="images/nostalgiabox1.jpg" alt="justfootball project desktop mockup" class="project-image"
-				transition:fade={{ duration: 500 }}/>
-		</div>
-	</div>
-	<div class="block">
-		<div class="child">
-			<img src="images/justfootball.jpg" alt="just football project laptop mockup" class="project-image"
-				transition:fade={{ duration: 500 }}/>
-		</div>
-		<div class="child">
-			<div class="text-container">
-				<h3> Football -- Village </h3>
-				<h3 class="accent"> 2023 </h3>
-			</div>
-		</div>
-	</div>
-	<div class="block">
-		<div class="child">
-			<div class="text-container">
-				<div class="proj-description">
-					<LineSplit text={`Football--Village is a dynamic project designed to cultivate continuous learning and elevate football analysis and coaching skills. As a dedicated platform, it serves as a centralized hub for a diverse range of football-related work.`} id={uuid()}/>
-
-					<LineSplit text={`Weekly, the site unveils articles that delve into various coaching topics, encompassing game analysis, contemporary football trends, session planning, exercises, management insights, and compelling data analysis or visualizations. `} id={uuid()}/>
-
-					<LineSplit text={`At its core, Football--Village aims to be a learning sanctuary for aspiring coaches, football enthusiasts, and players eager to deepen their understanding and enjoyment of the sport. The commitment to delivering substantial content is a personal journey to grow and gain a profound appreciation for the intricacies of the game.`} id={uuid()}/>
-
-					<LineSplit text={`This project seeks to foster a community where growth is a shared experience, nurturing relationships that benefit everyone involved. It stands out by offering youth coaching resources freely, recognizing that coaching extends beyond individuals—it's about the holistic development of players. By supporting coaches in their roles, the project strives to cultivate not only superior players but better individuals.`} id={uuid()}/>
-
-					<LineSplit text={`Step into this space, where football enthusiasts discover valuable resources and contribute to an ever-evolving journey in football development.`} id={uuid()}/>
-
-					<a target="blank" href="https://just-football.vercel.app" class="site-link">Live Link.</a>
-				</div>
-			</div>
-		</div>
-		<div class="child">
-			<img src="images/justfootball2.jpg" alt="justfootball project desktop mockup" class="project-image"
-				transition:fade={{ duration: 500 }}/>
-		</div>
+<!-- 		<div class="marquee-container__block">
+			<h1 class="marquee-container__text">projeks /</h1>
+			<h1 class="marquee-container__text">projeks /</h1>
+			<h1 class="marquee-container__text">projeks /</h1>
+		</div> -->
 	</div>
 
-	<div class="block">
-		<div class="child">
-			<img src="images/sundance.jpg" alt="sundance project laptop mockup" class="project-image"
-				transition:fade={{ duration: 500 }}/>
-		</div>
-		<div class="child">
-			<div class="text-container">
-				<h3> Sundance, New Frontier </h3>
-				<h3 class="accent"> 2022 </h3>
+
+	<div class="projects-container">
+		<div class="project">
+			<div class="text-wrapper">
+				<h3 class="project__title">/NostalgiaBox</h3>
+				<h3 class="project__title">/NostalgiaBox</h3>
+				<h3 class="project__title">/NostalgiaBox</h3>
+
+				<a target="blank" href="https://nostalgiabox.app" class="site-link">Live Link.</a>
 			</div>
+			<div class="block"></div>
 		</div>
-	</div>
-	<div class="block">
-		<div class="child">
-			<div class="text-container">
-				<div class="proj-description">
-					<LineSplit text={`The New Frontier program was “a fully biodigital showcase”. A globally accessible online project from Jan. 20-28, 2022, with in-person extensions and live performances at The Craft, a new artist-centered venue in Park City. Originally birthed as a response to the coronavirus pandemic, New Frontier created a space were people could still experience the Sundance Film Festival from the comfort, and safety of their own homes. `} id={uuid()}/>
-					
-					
-					<LineSplit text={`Live premiers following an event schedule, VR immersion, real time audio and video chats in 3D enviornments, text chat, and attendee lists, all features that were built and offered in the New Frontier for Sundance.`} id={uuid()}/>
-					
-					
-					<a target="blank" href="https://www.sundance.org/blogs/2022-sundance-film-festival-new-frontier-spans-biodigital-terrain-blends-online-in-person-in-real-time/" class="site-link">Sundance Blog Post.</a>
-				</div>
+		<div class="project">
+			<div class="text-wrapper">
+				<h3 class="project__title">/Football--Village</h3>
+				<h3 class="project__title">/Football--Village</h3>
+				<h3 class="project__title">/Football--Village</h3>
+
+				<a target="blank" href="https://just-football.vercel.app" class="site-link">Live Link.</a>
 			</div>
+			<div class="block"></div>
 		</div>
-		<div class="child">
-			<img src="images/sundance2.jpg" alt="sundance project laptop mockup" class="project-image"
-				transition:fade={{ duration: 500 }}/>
+		<div class="project">
+			<div class="text-wrapper">
+				<h3 class="project__title">/New Frontier</h3>
+				<h3 class="project__title">/New Frontier</h3>
+				<h3 class="project__title">/New Frontier</h3>
+
+				<a target="blank" href="https://www.sundance.org/blogs/2022-sundance-film-festival-new-frontier-spans-biodigital-terrain-blends-online-in-person-in-real-time/" class="site-link">Sundance Blog Post.</a>
+			</div>
+			<div class="block"></div>
 		</div>
 	</div>
 </div>
@@ -129,64 +94,98 @@
 		grid-auto-rows: minmax(20rem, auto);
 		font-family: 'Manrope';
 		opacity: 1;
-		padding: 4rem 2rem;
-/*		padding-top: 8rem;*/
+		margin: 0 2rem;
 	}
 
-	.block {
-		grid-column: 1/11;
-		display: flex;
-		margin-bottom: 6rem;
-	}
-	.child {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex: 1;
-		height: auto;
-/*		overflow: hidden;*/
-	}
-	.text-container {
-		display: flex;
+	.marquee-container {
+		position: fixed;
+		top: 6rem;
+		z-index: 0;
+		width: calc(100vw - 4rem);
 		height: 100%;
-		flex-direction: column;
-		justify-content: space-between;
-		padding: 3rem 1.5rem;
+		overflow: hidden;
 	}
-	.site-link {
+
+	.marquee-container__block {
+		display: flex;
+		min-width: 100%;
+/*		transform: translateX(30%);*/
+		flex: 0 0 auto;
+/*		gap: 0.1rem;*/
+		min-width: 100%;
+		width: fit-content;
+	}
+	.marquee-container__text {
+		font-size: 30rem;
+		margin-bottom: 0rem;
+		margin-top:0rem;
+/*		min-width: 100%;*/
+		width: auto;
+	}
+
+	.projects-container {
+		grid-column: 6/11;
+		z-index: 2;
+	}
+	.project {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 7/4;
+		padding: 2rem;
+		background: var(--base);
+		border: solid var(--primary);
+		border-width: 0 0 1px 1px;
 		color: var(--black);
-		text-decoration: underline;
-		font-size: 1.8rem;
+		position: relative;
+		overflow: hidden;
+		transition: ease 0.6s;
 	}
-	.project-image {
+	.project__title {
+		font-size: 2rem;
+		line-height: 1.5;
+		font-weight: normal;
+		z-index: 1;
+	}
+
+	.site-link {
+		color: inherit;
+		margin-top: 10rem;
+		text-decoration: none;
+		font-size: 1.8rem;
+		line-height: 1.5;
+		font-weight: normal;
+		font-style: italic;
+		z-index: 1;
+	}
+
+	.text-wrapper {
+		position: absolute;
+		z-index: 2;
+		transition: ease 0.6s;
+	}
+	.block {
 		height: 100%;
 		width: 100%;
-		max-height: 72rem;
-		max-width: 94rem;
-		border-radius: 15%;
-		object-fit: cover;
-/*		border: solid 0.5px var(--primary);*/
-		aspect-ratio: 4/5;
-		margin: auto;
-	}
-	.proj-description {
-		font-size: 1.8rem;
-		font-weight: normal;
-		letter-spacing: 1.2%;
-		line-height: 1.5;
-		display: flex;
-		justify-content: center;
-		flex: 1;
-		flex-direction: column;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		background: var(--primary);
+		z-index: 0;
+		transition: ease 0.6s;
 	}
 
-	.accent {
-		/*background: var(--primary);
-		color: var(--accent);*/
+	.project:hover {
+		color: var(--white);
 	}
+
+	.project:hover > .block {
+		transform: translateX(-100%);
+	}
+
+
 
 	@media(max-width: 800px) {
-		.mgrid {
+		.container {
 			display: flex;
 			flex-direction: column;
 		}

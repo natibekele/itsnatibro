@@ -20,12 +20,15 @@
 
 <style>
 	footer {
-		margin: 0 2rem;
+/*		margin: 0 2rem;*/
 		font-family: 'Manrope';
-		padding: 5.5rem 0 2.25rem 0;
+		padding: 5.5rem 2rem 2.25rem 2rem;
 		font-size: 1.4rem;
 		font-weight: 500;
 		letter-spacing: -0.32px;
+		background: var(--base);
+		z-index: 10;
+		position: absolute;
 	}
 	.row {
 		display: flex;

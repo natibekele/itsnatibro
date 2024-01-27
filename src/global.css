@@ -12,6 +12,7 @@ html,body {
 	::-webkit-scrollbar-thumb {
 		background: var(--accent);
 	}
+/*	position: relative;*/
 }
 
 @media(max-width: 800px) {

@@ -1,4 +1,4 @@
-<header class="header">
+<nav class="header">
 	<ul class="header--ul">
 		<li class="header--big-text"> NATHAN SHANKO </li>
 
@@ -11,7 +11,7 @@
 	</ul>
 
 	<div class="border-bottom"></div>
-</header>
+</nav>
 
 
 <style>

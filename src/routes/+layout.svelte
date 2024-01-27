@@ -19,8 +19,8 @@
 <div class="slot-container">
 	<slot/>
 </div>
-<!-- {/key} -->
 <Footer />
+<!-- {/key} -->
 
 <!-- <SlideTransition /> -->
 
