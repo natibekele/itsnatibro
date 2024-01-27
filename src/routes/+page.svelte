@@ -79,7 +79,7 @@
 
 
 	<div class="video-block">
-		<video type="video/mp4" src="/videos/comp.mp4" muted=true autoplay=true loop/>
+		<video type="video/mp4" src="/videos/comp.mp4" muted=true autoplay=true loop playsinline/>
 		<div class="overlay"></div>
 	</div>
 
