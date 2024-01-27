@@ -214,7 +214,7 @@
 		background: var(--primary);
 	}
 
-	@media(max-width: 1200px){
+	@media(max-width: 1440px){
 		.header--big-text {
 			margin-right: 6rem;
 		}

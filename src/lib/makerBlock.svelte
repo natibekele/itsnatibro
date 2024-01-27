@@ -57,7 +57,7 @@
 		line-height: 140%;
 	}
 
-	@media(min-width: 1200px) {
+	@media(min-width: 1440px) {
 		.title {
 			font-size: 10rem;
 		}

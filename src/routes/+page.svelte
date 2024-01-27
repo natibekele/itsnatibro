@@ -229,7 +229,7 @@
 			transform: translateX(-300%);
 		}
 	}
-	@media(min-width: 1200px) {
+	@media(min-width: 1440px) {
 		.block1 {
 			max-height: none;
 		}

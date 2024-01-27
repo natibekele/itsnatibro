@@ -184,7 +184,7 @@
 	}
 
 
-	@media(min-width: 1200px) {
+	@media(min-width: 1440px) {
 		.marquee-container__text {
 			font-size: 45rem;
 		}
