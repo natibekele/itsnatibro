@@ -1,15 +1,14 @@
 <script type="text/javascript">
-	import { fade, scale, fly } from "svelte/transition";
-	import AnimatedText from "$lib/AnimatedText.svelte"
-	import RotatingSphere from "$lib/RotatingSphere.svelte"
-	import WordSplit from "$lib/WordSplit.svelte"
-	import LineSplit from "$lib/LineSplit.svelte"
+	import { fade, scale, fly } from 'svelte/transition';
+	import AnimatedText from '$lib/AnimatedText.svelte';
+	import RotatingSphere from '$lib/RotatingSphere.svelte';
+	import WordSplit from '$lib/WordSplit.svelte';
+	import LineSplit from '$lib/LineSplit.svelte';
 	import { quintOut } from 'svelte/easing';
-	import { onMount } from "svelte"
-	import anime from "animejs"
+	import { onMount } from 'svelte';
+	import anime from 'animejs';
 
-
-	onMount(startAnimation)
+	onMount(startAnimation);
 
 	function startAnimation() {
 		anime({
@@ -17,13 +16,13 @@
 			translateX: '-66.66666%',
 			duration: 20000,
 			loop: true,
-			easing: 'linear',
+			easing: 'linear'
 			// delay: anime.stagger(100)
-		})
+		});
 	}
 </script>
 
-<div class="container"  in:fade={{duration: 500 }} out:fade={{duration: 500}}>
+<div class="container" in:fade={{ duration: 500 }} out:fade={{ duration: 500 }}>
 	<div class="marquee-container">
 		<div class="marquee-container__block">
 			<h1 class="marquee-container__text">projects/</h1>
@@ -42,7 +41,6 @@
 		</div> -->
 	</div>
 
-
 	<div class="projects-container">
 		<div class="project">
 			<div class="text-wrapper">
@@ -51,6 +49,16 @@
 				<h3 class="project__title">/NostalgiaBox</h3>
 
 				<a target="blank" href="https://nostalgiabox.app" class="site-link">Live Link.</a>
+			</div>
+			<div class="block"></div>
+		</div>
+		<div class="project">
+			<div class="text-wrapper">
+				<h3 class="project__title">/Dreamwave Live</h3>
+				<h3 class="project__title">/Dreamwave Live</h3>
+				<h3 class="project__title">/Dreamwave Live</h3>
+
+				<a target="blank" href="https://dreamwave.live" class="site-link">Live Link.</a>
 			</div>
 			<div class="block"></div>
 		</div>
@@ -70,7 +78,25 @@
 				<h3 class="project__title">/New Frontier</h3>
 				<h3 class="project__title">/New Frontier</h3>
 
-				<a target="blank" href="https://www.sundance.org/blogs/2022-sundance-film-festival-new-frontier-spans-biodigital-terrain-blends-online-in-person-in-real-time/" class="site-link">Sundance Blog Post.</a>
+				<a
+					target="blank"
+					href="https://www.sundance.org/blogs/2022-sundance-film-festival-new-frontier-spans-biodigital-terrain-blends-online-in-person-in-real-time/"
+					class="site-link">Sundance Blog Post.</a
+				>
+			</div>
+			<div class="block"></div>
+		</div>
+		<div class="project">
+			<div class="text-wrapper">
+				<h3 class="project__title">/Footy Roulette</h3>
+				<h3 class="project__title">/Footy Roulette</h3>
+				<h3 class="project__title">/Footy Roulette</h3>
+
+				<a
+					target="blank"
+					href="https://apps.apple.com/us/app/footy-roulette/id1514228078"
+					class="site-link">App Store</a
+				>
 			</div>
 			<div class="block"></div>
 		</div>
@@ -110,17 +136,17 @@
 	.marquee-container__block {
 		display: flex;
 		min-width: 100%;
-/*		transform: translateX(30%);*/
+		/*		transform: translateX(30%);*/
 		flex: 0 0 auto;
-/*		gap: 0.1rem;*/
+		/*		gap: 0.1rem;*/
 		min-width: 100%;
 		width: fit-content;
 	}
 	.marquee-container__text {
 		font-size: 30rem;
 		margin-bottom: 0rem;
-		margin-top:0rem;
-/*		min-width: 100%;*/
+		margin-top: 0rem;
+		/*		min-width: 100%;*/
 		width: auto;
 	}
 
@@ -183,14 +209,13 @@
 		transform: translateX(-100%);
 	}
 
-
-	@media(min-width: 1440px) {
+	@media (min-width: 1440px) {
 		.marquee-container__text {
 			font-size: 45rem;
 		}
 	}
 
-	@media(max-width: 800px) {
+	@media (max-width: 800px) {
 		.marquee-container {
 			position: relative;
 			height: auto;
