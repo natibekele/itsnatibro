@@ -20,7 +20,7 @@
 	let coverDelay = 6000;
 	let defaultDuration = 700;
 	onMount(() => {
-		setTimeout((_) => {
+		setTimeout(() => {
 			introTimeline();
 			onAppear();
 		}, coverDelay);
@@ -155,8 +155,9 @@
 		max-height: 75rem;
 		overflow: hidden;
 		/*		border-radius: 20rem;*/
-		aspect-ratio: 1200 / 750;
+		/* aspect-ratio: 1200 / 750; */
 		position: relative;
+		background: var(--accent);
 	}
 	.video-block > video {
 		height: 100%;
@@ -245,6 +246,7 @@
 		}
 		.block1 {
 			grid-row: auto;
+			margin-bottom: var(--medium);
 		}
 		.container {
 			grid-row: auto;

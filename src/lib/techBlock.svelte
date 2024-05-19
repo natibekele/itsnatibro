@@ -1,66 +1,116 @@
 <script>
+	import IntersectionObserver from 'svelte-intersection-observer';
+	import { fade } from 'svelte/transition';
+	import RandomFadeInText from './RandomFadeInText.svelte';
+	let title;
+	let col1;
 </script>
 
-
 <div class="container">
-	<h1 class="title">Tchnlgy</h1>
+	<IntersectionObserver once element={title} let:intersecting>
+		<div bind:this={title}>
+			{#if intersecting}
+				<h1
+					class="title"
+					in:fade={{
+						duration: 500 + Math.random() * 50,
+						delay: Math.max(Math.random() * 40 + 1000, 500)
+					}}
+				>
+					Tchnlgy
+				</h1>
+			{/if}
+		</div>
+	</IntersectionObserver>
 
 	<div class="spacer"></div>
 
+	<IntersectionObserver once element={col1} let:intersecting>
+		<div bind:this={col1} class="subgrid">
+			{#if intersecting}
+				<div class="col1">
+					<h4
+						class="col-title"
+						in:fade={{
+							duration: 500 + Math.random() * 50,
+							delay: Math.max(Math.random() * 1000 + 1000, 500)
+						}}
+					>
+						frnt end
+					</h4>
 
-	<div class="col1">
-		<h4 class="col-title">frnt end</h4>
+					<RandomFadeInText>react</RandomFadeInText>
+					<RandomFadeInText>svelte</RandomFadeInText>
+					<RandomFadeInText>vue</RandomFadeInText>
+					<br />
+					<RandomFadeInText>three.js</RandomFadeInText>
+					<RandomFadeInText>glsl</RandomFadeInText>
+					<RandomFadeInText>webgl</RandomFadeInText>
+					<br />
+					<RandomFadeInText>sass</RandomFadeInText>
+					<RandomFadeInText>less</RandomFadeInText>
+					<RandomFadeInText>tailwind</RandomFadeInText>
+				</div>
 
-		<p class="tech">react</p>
-		<p class="tech">svelte</p>
-		<p class="tech">vue</p>
-		<br />
-		<p class="tech">three.js</p>
-		<p class="tech">glsl</p>
-		<p class="tech">webgl</p>
-		<br />
-		<p class="tech">sass</p>
-		<p class="tech">less</p>
-		<p class="tech">tailwind</p>
-		
-	</div>
+				<div class="col2">
+					<h4
+						class="col-title"
+						in:fade={{
+							duration: 500 + Math.random() * 50,
+							delay: Math.max(Math.random() * 1000 + 500, 500)
+						}}
+					>
+						bck end
+					</h4>
 
-	<div class="col2">
-		<h4 class="col-title">bck end</h4>
+					<RandomFadeInText>node</RandomFadeInText>
+					<RandomFadeInText>docker</RandomFadeInText>
+					<RandomFadeInText>bun</RandomFadeInText>
+					<br />
+					<RandomFadeInText>express</RandomFadeInText>
+					<RandomFadeInText>django</RandomFadeInText>
+					<RandomFadeInText>fastapi</RandomFadeInText>
+					<br />
+					<RandomFadeInText>google cloud</RandomFadeInText>
+					<RandomFadeInText>mondodb</RandomFadeInText>
+					<RandomFadeInText>postgres</RandomFadeInText>
+					<RandomFadeInText>firebase</RandomFadeInText>
+				</div>
 
-		<p class="tech">node</p>
-		<p class="tech">docker</p>
-		<p class="tech">bun</p>
-		<br />
-		<p class="tech">express</p>
-		<p class="tech">django</p>
-		<p class="tech">fastapi</p>
-		<br />
-		<p class="tech">google cloud</p>
-		<p class="tech">mondodb</p>
-		<p class="tech">postgres</p>
-		<p class="tech">firebase</p>
+				<div class="col3">
+					<h4
+						class="col-title"
+						in:fade={{
+							duration: 500 + Math.random() * 50,
+							delay: Math.max(Math.random() * 1000 + 1000, 500)
+						}}
+					>
+						ntve
+					</h4>
 
-		
-	</div>
+					<RandomFadeInText>iOS (Swift / SwiftUI / ObjectiveC)</RandomFadeInText>
+					<RandomFadeInText>Android (Kotlin / Java )</RandomFadeInText>
+					<RandomFadeInText>React Native</RandomFadeInText>
+				</div>
 
-	<div class="col3">
-		<h4 class="col-title">ntve</h4>
+				<div class="col4">
+					<h4
+						class="col-title"
+						in:fade={{
+							duration: 500 + Math.random() * 50,
+							delay: Math.max(Math.random() * 1000 + 1000, 500)
+						}}
+					>
+						dsgn
+					</h4>
 
-		<p class="tech">iOS (Swift / SwiftUI / ObjectiveC)</p>
-		<p class="tech">Android (Kotlin / Java )</p>
-		<p class="tech">React Native</p>
-		
-	</div>
-
-	<div class="col4">
-		<h4 class="col-title">dsgn</h4>
-
-		<p class="tech">i dabble...</p>
-		<p class="tech">but better every day</p>
-		<p class="tech">i did dsgn this site</p>
-		
-	</div>
+					<RandomFadeInText>i dabble...</RandomFadeInText>
+					<RandomFadeInText>but better every day</RandomFadeInText>
+					<RandomFadeInText>i did dsgn this site</RandomFadeInText>
+				</div>
+			{/if}
+		</div>
+	</IntersectionObserver>
 </div>
 
 <style>
@@ -72,6 +122,13 @@
 		grid-gap: 2rem;
 		margin-bottom: 10rem;
 		position: relative;
+	}
+	.subgrid {
+		grid-column: 1/10;
+		display: grid;
+		grid-row: 2;
+		grid-template-columns: repeat(8, 1fr);
+		grid-gap: 2rem;
 	}
 
 	.title {
@@ -88,6 +145,7 @@
 		height: 1px;
 		background: var(--primary);
 		grid-column: 1/9;
+		grid-row: 2;
 		margin-bottom: 5rem;
 	}
 
@@ -118,16 +176,17 @@
 	.col4 {
 		grid-column: 7/9;
 	}
-	.col1,.col2,.col3,.col4 {
-/*		background: var(--accent);*/
-	margin-bottom: 10rem;
+	.col1,
+	.col2,
+	.col3,
+	.col4 {
+		/*		background: var(--accent);*/
+		margin-bottom: 10rem;
 	}
 
-	@media(min-width: 1440px) {
+	@media (min-width: 1440px) {
 		.title {
 			font-size: 10rem;
 		}
 	}
-
-
 </style>
