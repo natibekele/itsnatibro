@@ -59,15 +59,16 @@
 		background-repeat: no-repeat;
 		transition: all ease-in-out 0.5s;
 		z-index: 0;
+		background-color: var(--primary);
 	}
 	.card1 {
-		background-image: url('images/shader001.png');
+		background-image: url('/images/shader001.png');
 	}
 	.card2 {
-		background-image: url('images/shader002.png');
+		background-image: url('/images/shader002.png');
 	}
 	.card3 {
-		background-image: url('images/shader003.png');
+		background-image: url('/images/shader003.png');
 	}
 	.experiment-card:nth-child(odd) {
 		border-width: 0 0px 2px 0px;
