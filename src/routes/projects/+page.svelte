@@ -68,7 +68,7 @@
 				<h3 class="project__title">/Football--Village</h3>
 				<h3 class="project__title">/Football--Village</h3>
 
-				<a target="blank" href="https://just-football.vercel.app" class="site-link">Live Link.</a>
+				<a target="blank" href="https://football-village.co" class="site-link">Live Link.</a>
 			</div>
 			<div class="block"></div>
 		</div>

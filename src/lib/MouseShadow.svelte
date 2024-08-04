@@ -1,14 +1,14 @@
 <script>
-	import {onMount} from "svelte"
-	import anime from "animejs"
+	import { onMount } from 'svelte';
+	import anime from 'animejs';
 	let myShadow;
-	onMount(_ => {
-		document.addEventListener('mousemove',updateShadowPosition)
-	})
+	onMount(() => {
+		document.addEventListener('mousemove', updateShadowPosition);
+	});
 
 	function updateShadowPosition(e) {
-		let x = e.clientX - 16
-		let y = e.clientY - 16
+		let x = e.clientX - 16;
+		let y = e.clientY - 16;
 
 		anime({
 			targets: myShadow,
@@ -34,12 +34,12 @@
 		background: var(--accent);
 		z-index: 10;
 		pointer-events: none;
-/*		opacity: 1;*/
-/*		mix-blend-mode: color-dodge;*/
-/*		transition: ease-out 0.2s;*/
+		/*		opacity: 1;*/
+		/*		mix-blend-mode: color-dodge;*/
+		/*		transition: ease-out 0.2s;*/
 	}
 
-	@media(max-width: 760px) {
+	@media (max-width: 760px) {
 		.shadow {
 			display: none;
 		}

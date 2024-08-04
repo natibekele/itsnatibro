@@ -1,28 +1,86 @@
 <script type="text/javascript">
-	import { fade, scale, fly } from "svelte/transition";
+	import { fade, scale, fly } from 'svelte/transition';
 </script>
-<div class="exp">
-	<h3 in:fade={{ y: 0, duration: 750, delay: 300 }}> work in progress</h3>
 
-	<p in:fade={{ y:0, duration: 750, delay: 500 }} > i'm building something new for this space. sadly it's not finished yet. come & check back soon! </p>
-</div>
+<main class="h-full">
+	<div class="experiment-grid">
+		<a class="experiment-card" href="experiments/shader001">
+			<h2 class="card-title">/Shader001</h2>
+			<p class="experiment-card__description"></p>
+			<div class="preview-image card1" />
+		</a>
+		<a class="experiment-card" href="experiments/shader002">
+			<h2 class="card-title">/Shader002</h2>
+			<p class="experiment-card__description"></p>
+			<div class="preview-image card2" />
+		</a>
+		<a class="experiment-card" href="experiments/shader003">
+			<h2 class="card-title">/Shader003</h2>
+			<p class="experiment-card__description"></p>
+			<div class="preview-image card3" />
+		</a>
+	</div>
+</main>
 
 <style>
-	div {
+	.h-full {
+		height: 100%;
+	}
+	.experiment-grid {
+		display: flex;
 		font-family: 'Manrope';
-		padding: 1.5rem 0rem;
-/*		background: var(--killbill-yellow);*/
-		height: 90vh;
-		width: 100%;
+		opacity: 1;
+		margin-top: var(--small);
+		flex-wrap: wrap;
 		margin: 0 2rem;
 	}
-	h3 {
-		font-size: 3rem;
-		letter-spacing: -0.28rem;
-		margin: 0;
-		font-weight: 700;
+	.experiment-card {
+		flex: 1;
+		min-width: 50%;
+		min-height: 40rem;
+		grid-column: 1 / 2;
+		border: solid 0px var(--primary);
+		padding: var(--medium);
+		transition: ease-in-out 0.2s;
+		text-decoration: none;
+		position: relative;
+		overflow: hidden;
 	}
-	p {
-		font-size: 1.6rem;
+	.experiment-card:hover .preview-image {
+		transform: translateX(-100%);
+	}
+	.preview-image {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		height: 100%;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		transition: all ease-in-out 0.5s;
+		z-index: 0;
+	}
+	.card1 {
+		background-image: url('images/shader001.png');
+	}
+	.card2 {
+		background-image: url('images/shader002.png');
+	}
+	.card3 {
+		background-image: url('images/shader003.png');
+	}
+	.experiment-card:nth-child(odd) {
+		border-width: 0 0px 2px 0px;
+	}
+	.experiment-card:nth-child(even) {
+		border-width: 0 0px 2px 0px;
+	}
+	.card-title {
+		letter-spacing: -0.6px;
+		font-size: var(--text-reg);
+		font-weight: 500;
+		color: var(--primary);
+		/* mix-blend-mode: difference; */
+		z-index: 1;
 	}
 </style>
