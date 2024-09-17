@@ -19,6 +19,21 @@
 			<p class="experiment-card__description"></p>
 			<div class="preview-image card3" />
 		</a>
+		<a class="experiment-card" href="experiments/shader004">
+			<h2 class="card-title">/Shader004</h2>
+			<p class="experiment-card__description"></p>
+			<div class="preview-image card4" />
+		</a>
+		<a class="experiment-card" href="experiments/shader005">
+			<h2 class="card-title">/Shader005</h2>
+			<p class="experiment-card__description"></p>
+			<div class="preview-image card5" />
+		</a>
+		<a class="experiment-card" href="experiments/shader006">
+			<h2 class="card-title">/Shader006</h2>
+			<p class="experiment-card__description"></p>
+			<div class="preview-image card6" />
+		</a>
 	</div>
 </main>
 
@@ -69,6 +84,15 @@
 	}
 	.card3 {
 		background-image: url('/images/shader003.png');
+	}
+	.card4 {
+		background-image: url('/images/shader004.png');
+	}
+	.card5 {
+		background-image: url('/images/shader005.png');
+	}
+	.card6 {
+		background-image: url('/images/shader006.png');
 	}
 	.experiment-card:nth-child(odd) {
 		border-width: 0 0px 2px 0px;
